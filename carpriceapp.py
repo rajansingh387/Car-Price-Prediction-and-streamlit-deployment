@@ -6,9 +6,10 @@ import pickle
 import streamlit as st
 
 # Load the data and model
-df = pickle.load(open('carsellingdata.pkl', 'rb')) 
-model= pickle.load(open('pipe_rf_car.pkl','rb'))
-
+#df = pickle.load(open('carsellingdata.pkl', 'rb'))  # Absolute path
+#model= pickle.load(open('pipe_rf_car.pkl','rb'))
+df = pd.read_pickle('carsellingdata.pkl')
+model = pd.read_pickle('pipe_rf_car.pkl')
 # Set up the Streamlit application
 st.title('car price prediction')
 st.header("choose your car's model and its specifications")
