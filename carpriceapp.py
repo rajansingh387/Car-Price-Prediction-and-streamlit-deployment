@@ -6,7 +6,7 @@ import pickle
 import streamlit as st
 
 # Load the data and model
-df = pickle.load(open('D:\car price project\carsellingdata.pkl', 'rb')) 
+df = pickle.load(open('carsellingdata.pkl', 'rb')) 
 model= pickle.load(open('pipe_rf_car.pkl','rb'))
 
 # Set up the Streamlit application
